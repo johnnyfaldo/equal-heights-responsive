@@ -20,12 +20,20 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 (function($) {
 	
-	$.fn.equalHeights = function() {
+	$.fn.equalHeights = function(options) {
 		
-		//vars
+		//settings
+		var settings = $.extend ({
+			//resize elements upon window resize
+			responsive:   false,
+			//animate the resize
+			animate:      false,
+			//animate speed
+			animateSpeed: 200
+		},options);
+		
 		var that = this, className = '.'+$(this).prop('class');
 		
-		//initiate 
 		var init = function() {
 			
 			var height = 0;
@@ -36,27 +44,35 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 				height = (elementHeight > height) ? elementHeight : height;
 			});
 			
-			//set all elements to equal height
-			$(className).css("height",height);
+			//if animate setting is true, transition into new dimensions
+			if(settings.animate === true) {
+				that.each(function() {
+					$(this).animate({height:height},settings.animateSpeed);
+				});
+			}else {
+				//resize without animation
+				$(className).css("height",height);
+			}
 				
 		};
 		
-		//re initiate
+		//re initialise
 		var reInit = _.debounce(function(e) {
 			init();
 		},400);
 		
-		//initiate 
+		//initialise
 		init();
-
-		//check for window resize
-		$(window).resize(function() {
-			//reset height to auto
-			$(className).css("height","auto");
-			//re initiate
-			reInit();
-		});
-	
+		
+		//check for window resize if responsive setting is true
+		if(settings.responsive === true) {
+			$(window).resize(function() {
+				//reset height to auto
+				$(className).css("height","auto");
+				//re initialise
+				reInit();
+			});
+		}
 			
 	};
 	
