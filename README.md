@@ -16,3 +16,9 @@ A simple jQuery plugin that allows you to set a group of elements height to that
 $('.elements').equalHeight();
 
 ```
+
+## FIle 
+
+The plugin is located: js/equal-heights-responsive.js
+
+
