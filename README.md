@@ -12,8 +12,8 @@ A simple jQuery plugin that allows you to set a group of elements height to that
 ##Options 
 
 *	responsive: true/false  - default is *false*, true enables responsive behavior
-*	animation:  true/false  - default is *false*, true enables animations on resize 
-*	animationSpeed: integer - default is *400*ms 
+*	animate:  true/false  - default is *false*, true enables animations on resize 
+*	animateSpeed: integer - default is *400*ms 
 
 ## Usage 
 
@@ -40,7 +40,7 @@ With animation, speed is default to 400ms:
 ```
 
 $('.elements').equalHeights({
-	animation:true
+	animate:true
 })
 
 ```
@@ -51,8 +51,8 @@ With responsive, animation and custom animation speed:
 
 $('.elements').equalHeights({
 	responsive:true,
-	animation:true,
-	animationSpeed:500
+	animate:true,
+	animateSpeed:500
 })
 
 ```
