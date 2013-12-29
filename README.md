@@ -6,8 +6,8 @@ A simple jQuery plugin that allows you to set a group of elements height to that
 
 ## Requirements 
 
-*jQuery http://jquery.com/download/
-*underscore.js http://underscorejs.org/ 
+*	jQuery http://jquery.com/download/
+*	underscore.js http://underscorejs.org/ 
 
 ## Usage 
 
