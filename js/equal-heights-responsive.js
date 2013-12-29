@@ -34,7 +34,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 		
 		var that = this, className = '.'+$(this).prop('class');
 		
-		var init = function() {
+		var init = function(initial) {
 			
 			var height = 0;
 			
@@ -44,8 +44,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 				height = (elementHeight > height) ? elementHeight : height;
 			});
 			
-			//if animate setting is true, transition into new dimensions
-			if(settings.animate === true) {
+			//if we're responding to window resize and animate setting is true, transition into new dimensions
+			if(settings.animate === true && initial !== true) {
 				that.each(function() {
 					$(this).animate({height:height},settings.animateSpeed);
 				});
@@ -58,11 +58,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 		
 		//re initialise
 		var reInit = _.debounce(function(e) {
-			init();
+			init(false);
 		},400);
 		
-		//initialise
-		init();
+		//initialise as initial use #don't animate
+		init(true);
 		
 		//check for window resize if responsive setting is true
 		if(settings.responsive === true) {
