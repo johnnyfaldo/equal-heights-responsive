@@ -18,6 +18,22 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-$(function() {
+(function($) {
 	
-}).jQuery();
+	$.fn.equalHeights = function(options) {
+		
+		//TODO add options
+		var settings = $.extend({
+		},options);
+		
+		return this.each(function() {
+			
+			var height = 0, $e = this;
+			
+			console.log($e.html());
+			
+		});
+		
+	};
+	
+}(jQuery));
