@@ -26,7 +26,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 		var that = this, className = '.'+$(this).prop('class');
 		
 		//initiate 
-		var init = _.debounce(function(e) {
+		var init = function() {
 			
 			var height = 0;
 			
@@ -39,7 +39,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 			//set all elements to equal height
 			$(className).css("height",height);
 				
-		},500);
+		};
+		
+		//re initiate
+		var reInit = _.debounce(function(e) {
+			init();
+		},400);
 		
 		//initiate 
 		init();
@@ -49,7 +54,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 			//reset height to auto
 			$(className).css("height","auto");
 			//re initiate
-			init();
+			reInit();
 		});
 	
 			
