@@ -6,11 +6,15 @@
 		<link rel="stylesheet" type="text/css" href="css/ehr.css" />
 		<!-- jQuery -->
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" ></script>
+		<!-- underscore.js -->
+		<script src="js/underscore.js"></script>
 		<!-- javascript -->
 		<script type="text/javascript" src="js/equal-heights-responsive.js"></script>
 		<!-- initiate plugin -->
 		<script type="text/javascript">
-			$('.block').equalHeightsResponsive();
+			$(document).ready(function() {
+				$('.block').equalHeights();
+			});
 		</script>
 	</head>
 	<body>
