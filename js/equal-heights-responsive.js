@@ -26,14 +26,35 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 		var settings = $.extend({
 		},options);
 		
-		return this.each(function() {
-			
-			var height = 0, $e = this;
-			
-			console.log($e.html());
-			
-		});
+		//vars
+		var that = this, className = $(this).prop('class');
 		
+		//initiate
+		var init = _.debounce(function(e) {
+			
+			var height = 0;
+			//find and set the height of the tallest element
+			that.each(function() {
+				var elementHeight = $(this).height();
+				height = (elementHeight > height) ? elementHeight : height;
+			});
+			//set all elements to equal height
+			$('.'+className).css("height",height);
+	
+			console.log('hey');
+			
+		},500);
+		
+		//initiate 
+		init();
+
+		//check for window resize and debounce layout update
+		$(window).resize(function() {
+			$('.'+className).css("height","auto");
+			init();
+		});
+	
+			
 	};
 	
 }(jQuery));
