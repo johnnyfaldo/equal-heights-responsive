@@ -20,37 +20,35 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 (function($) {
 	
-	$.fn.equalHeights = function(options) {
-		
-		//TODO add options
-		var settings = $.extend({
-		},options);
+	$.fn.equalHeights = function() {
 		
 		//vars
-		var that = this, className = $(this).prop('class');
+		var that = this, className = '.'+$(this).prop('class');
 		
-		//initiate
+		//initiate 
 		var init = _.debounce(function(e) {
 			
 			var height = 0;
+			
 			//find and set the height of the tallest element
 			that.each(function() {
 				var elementHeight = $(this).height();
 				height = (elementHeight > height) ? elementHeight : height;
 			});
-			//set all elements to equal height
-			$('.'+className).css("height",height);
-	
-			console.log('hey');
 			
+			//set all elements to equal height
+			$(className).css("height",height);
+				
 		},500);
 		
 		//initiate 
 		init();
 
-		//check for window resize and debounce layout update
+		//check for window resize
 		$(window).resize(function() {
-			$('.'+className).css("height","auto");
+			//reset height to auto
+			$(className).css("height","auto");
+			//re initiate
 			init();
 		});
 	
