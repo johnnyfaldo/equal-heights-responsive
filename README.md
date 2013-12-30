@@ -4,6 +4,10 @@ A simple jQuery plugin that allows you to set a group of elements height to that
 
 *	Author: John Faldo johnfaldo@gmail.com
 
+## Example 
+
+You can view a working example at: http://optdesign.co.uk/equal-heights-responsive/
+
 ## Requirements 
 
 *	jQuery http://jquery.com/download/
@@ -66,7 +70,8 @@ Minified version:      js/equal-heights-responsive.min.js
 
 ## Cross Browser Compatibility
 
-Tested and working in Chrome Version 31.0.1650.63 m, Firefox 25.01, Opera 18.0 IE 7,8,9,10
+Tested and working in *Chrome* Version 31.0.1650.63 m, *Firefox* 25.01, *Opera* 18.0, *IE* 7,8,9,10
+
 
 
 
