@@ -14,19 +14,33 @@
 		<script type="text/javascript">
 			$(document).ready(function() {
 				$('.block').equalHeights({
-					responsive:true,
-					animate:true
+					responsive:true
 				});
 			});
 		</script>
+		<!-- html5 shiv -->
+		<script src="js/html5shiv.js"></script>
 	</head>
 	<body>
 		
-		<!-- example -->
+		<header class="title">
+			<h1>.equalHeights(<span class="blue">responsive</span>)</h1>
+			<a class="email" title="email me" href="mailto:johnfaldo@gmail.com">Author: John Faldo - johnfaldo@gmail.com</a>
+		</header>
 		
+		<div class="hr-line"> </div>
+		
+		<header class="documentation">
+			DOCUMENTATION: 
+			<a title="options and example usage" href="https://github.com/johnnyfaldo/equal-heights-responsive/blob/master/README.md" target="_blank">https://github.com/johnnyfaldo/equal-heights-responsive/blob/master/README.md</a>
+		</header>
+		
+		<div class="hr-line"> </div>
+		
+		<!-- example -->
 		<div id="container">
 			<div class="block">
-				<h1>Hi, I'm a div</h1>
+				<h1>Hi I'm a div</h1>
 				<p>Nullam sit amet tincidunt massa, a congue eros. Sed quis lectus odio. Curabitur non turpis nibh. Quisque in orci in nisl sollicitudin eleifend. Aliquam sagittis scelerisque tincidunt. Ut ac auctor mi.</p>
 			</div>
 			<div class="block">
@@ -38,7 +52,6 @@
 				<p>Nullam sit amet tincidunt massa, a congue eros. Sed quis lectus odio. Curabitur non turpis nibh. </p>
 			</div>
 		</div>
-		
 		<!-- end example -->
 		
 	</body>

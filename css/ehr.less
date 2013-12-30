@@ -5,28 +5,110 @@
  */
 
 //vars 
-@background:       #EEEEEE;
-@block-background: #FFFFFF;
-@block-border:     #CCCCCC;
+@background:       #EEE;
+@block-background: #FFF;
+@block-border:     #CCC;
+
+@grey:             #333;
+@blue:             #3B9AFB;
+
+@hr-line-dark:     #D1D7D8;
+@hr-line-light:    #FFF;
+
+
+//fonts
+@font-face {
+    font-family: 'raspoutine';
+    src: url('fonts/raspoutine_medium_italic.eot');
+    src: url('fonts/raspoutine_medium_italic.eot?#iefix') format('embedded-opentype'),
+         url('fonts/raspoutine_medium_italic.woff') format('woff'),
+         url('fonts/raspoutine_medium_italic.ttf') format('truetype'),
+         url('fonts/raspoutine_medium_italic.svg#raspoutine_medium_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+.raspoutine {
+  font-family:raspoutine;
+}
+.arial {
+  font-family:Arial, Helvetica, sans-serif;
+}
 
 //styles
 body {
   margin:0px;
   padding:50px 0px 0px 0px;
   background:@background;
+  min-width:500px;
+}
+
+//header 
+.title {
+  width:100%;
+  float:left;
+  text-align:center;
+  .raspoutine;
+  color:@grey;
+  h1 {
+    margin:0px 0px 10px 0px;
+    .blue {
+      color:@blue;
+    }
+  }
+  a {
+    color:@grey;
+    font-size:18px;
+    text-decoration:none;
+  }
+}
+
+.hr-line {
+  width:100%;
+  float:left;
+  height:1px;
+  background-color:@hr-line-dark;
+  border-top:1px solid @hr-line-light;
+  margin:20px 0px 20px 0px;
+}
+
+.documentation {
+  width:100%;
+  float:left;
+  text-align:center;
+  .raspoutine;
+  font-size:18px;
+  a {
+    color:@blue;
+  }
 }
 
 #container {
   width:90%;
   margin:0 auto;
+  padding:30px 0px 30px 0px;
 }
 
 .block {
-  width:20%;
-  margin-right:8%;
+  width:26%;
+  margin-right:3%;
   float:left;
   background:@block-background;
   border:1px solid @block-border;
   padding:2%;
+  h1 {
+    color:@blue;
+    .raspoutine;
+    font-size:30px;
+    margin:0px 0px 20px 0px;
+  }
+  &:last-child {
+    margin-right:0px;
+  }
+  p{
+    .arial;
+    font-size:13.5px;
+    line-height:22px;
+    text-align:justify;
+   }
 }
 
