@@ -64,5 +64,9 @@ The plugin is located: js/equal-heights-responsive.js
 Minified version:      js/equal-heights-responsive.min.js 
 
 
+## Cross Browser Compatibility
+
+Tested and working in Chrome Version 31.0.1650.63 m, Firefox 25.01, Opera 18.0 IE 7,8,9,10
+
 
 
