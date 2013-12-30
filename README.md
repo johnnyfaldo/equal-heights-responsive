@@ -39,7 +39,7 @@ $('.elements').equalHeights({
 
 ```
 
-With animation, speed is default to 400ms:
+With animation, speed is default to 200ms:
 
 ```
 
