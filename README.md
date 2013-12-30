@@ -17,7 +17,7 @@ You can view a working example at: http://optdesign.co.uk/equal-heights-responsi
 
 *	responsive: true/false  - default is *false*, true enables responsive behavior
 *	animate:  true/false  - default is *false*, true enables animations on resize 
-*	animateSpeed: integer - default is *400*ms 
+*	animateSpeed: integer - default is *200*ms 
 
 ## Usage 
 
